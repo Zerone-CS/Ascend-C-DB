@@ -1,0 +1,66 @@
+# Ascend C 算子通用 CMakeLists.txt 模板
+# 用法: 复制到算子目录并修改 OP_NAME
+
+cmake_minimum_required(VERSION 3.16)
+
+# ==== 修改这里 ====
+set(OP_NAME "your_op_name")  # 算子名称
+set(SOC_VERSION "Ascend910B2" CACHE STRING "SOC Version")
+# ==================
+
+project(${OP_NAME}_kernel)
+
+# CANN 环境
+if(NOT DEFINED ENV{ASCEND_HOME_PATH})
+    set(ASCEND_HOME_PATH "/usr/local/Ascend/ascend-toolkit/latest")
+else()
+    set(ASCEND_HOME_PATH $ENV{ASCEND_HOME_PATH})
+endif()
+
+# SOC 架构映射
+if(${SOC_VERSION} MATCHES "Ascend910.*")
+    set(AICORE_ARCH "dav-c220")
+elseif(${SOC_VERSION} MATCHES "Ascend310P.*")
+    set(AICORE_ARCH "dav-c100")
+else()
+    set(AICORE_ARCH "dav-c220")
+endif()
+
+message(STATUS "SOC Version: ${SOC_VERSION}")
+message(STATUS "AI Core Arch: ${AICORE_ARCH}")
+
+# 编译器设置
+set(CCEC "${ASCEND_HOME_PATH}/compiler/ccec_compiler/bin/ccec")
+set(CMAKE_CXX_COMPILER ${CCEC})
+
+# 编译选项
+set(CMAKE_CXX_FLAGS "--cce-aicore-arch=${AICORE_ARCH} -O2")
+
+# 包含路径
+include_directories(
+    ${ASCEND_HOME_PATH}/compiler/tikcpp/tikcfw
+    ${ASCEND_HOME_PATH}/include
+)
+
+# Kernel 编译
+add_library(${OP_NAME}_kernel OBJECT ${OP_NAME}_custom.cpp)
+
+# Host 程序 (可选)
+if(EXISTS "${CMAKE_SOURCE_DIR}/main.cpp")
+    # 切换到系统g++
+    set(CMAKE_CXX_COMPILER g++)
+    set(CMAKE_CXX_FLAGS "-std=c++17 -O2")
+    
+    add_executable(${OP_NAME}_npu main.cpp)
+    target_include_directories(${OP_NAME}_npu PRIVATE
+        ${ASCEND_HOME_PATH}/include
+        ${ASCEND_HOME_PATH}/include/aclnn
+    )
+    target_link_directories(${OP_NAME}_npu PRIVATE
+        ${ASCEND_HOME_PATH}/lib64
+    )
+    target_link_libraries(${OP_NAME}_npu
+        ascendcl
+        runtime
+    )
+endif()

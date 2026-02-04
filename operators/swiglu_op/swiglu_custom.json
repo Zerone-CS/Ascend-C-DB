@@ -1,0 +1,27 @@
+[
+    {
+        "op": "SwiGLUCustom",
+        "input_desc": [
+            {
+                "name": "x",
+                "param_type": "required",
+                "format": ["ND"],
+                "type": ["fp32"]
+            },
+            {
+                "name": "gate",
+                "param_type": "required",
+                "format": ["ND"],
+                "type": ["fp32"]
+            }
+        ],
+        "output_desc": [
+            {
+                "name": "y",
+                "param_type": "required",
+                "format": ["ND"],
+                "type": ["fp32"]
+            }
+        ]
+    }
+]

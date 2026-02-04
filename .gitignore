@@ -1,0 +1,86 @@
+# 构建产物
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.egg-info/
+dist/
+build/
+build_out/
+*_npu
+*_aclnn
+
+# 二进制数据
+input/*.bin
+output/*.bin
+*.bin
+!data/*.bin
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CPackConfig.cmake
+CPackSourceConfig.cmake
+Makefile
+
+# 打包产物
+*.run
+_CPack_Packages/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg
+*.egg-info/
+.eggs/
+.tox/
+.venv/
+venv/
+ENV/
+
+# 日志
+*.log
+*.log.*
+
+# Profiling 产出
+PROF_*/
+profiling*/
+prof_output*/
+prof_instr*/
+
+# 性能分析数据库
+*.db
+!data/ascend_c_guide.db
+
+# 其他临时文件
+tmp/
+temp/
+fusion_result.json
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
