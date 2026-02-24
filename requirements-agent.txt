@@ -1,0 +1,4 @@
+# Agent dependencies
+# For full dependency management, use: pip install -e ".[agent]"
+-r requirements.txt
+httpx>=0.24.0

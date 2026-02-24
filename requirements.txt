@@ -1,0 +1,6 @@
+# Core dependencies (sparse retrieval)
+# For full dependency management, use: pip install -e .
+jieba>=0.42.1
+scikit-learn>=1.3.0
+scipy>=1.11.0
+numpy>=1.24.0

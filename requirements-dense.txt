@@ -1,0 +1,6 @@
+# Dense retrieval dependencies
+# For full dependency management, use: pip install -e ".[dense]"
+-r requirements.txt
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+torch>=2.0.0

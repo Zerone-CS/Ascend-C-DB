@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report a bug
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      placeholder: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Run `python main.py ...`
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Python: 3.10
+        - ascend-c-kb version: 0.1.0
+    validations:
+      required: true

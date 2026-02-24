@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MinerU intermediate outputs
+output/
+mineru_run.log
+
+# Source PDF (user-provided, too large for git)
+*.pdf
+
+# Knowledge base index (regenerable via: python main.py build)
+knowledge_base/index_store/*.json
+knowledge_base/index_store/*.pkl
+knowledge_base/index_store/*.index
+knowledge_base/kernel_meta/
+!knowledge_base/index_store/.gitkeep
+
+# Data directory (user-provided Markdown)
+data/*.md
+!data/.gitkeep
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Ruff
+.ruff_cache/

@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ascend-c-kb"
+version = "0.1.0"
+description = "RAG-enhanced knowledge base & agent for Ascend C operator development"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [
+    {name = "AscendC-KB Contributors"},
+]
+keywords = ["ascend", "npu", "operator", "rag", "knowledge-base", "huawei", "cann"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "jieba>=0.42.1",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.11.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+agent = [
+    "httpx>=0.24.0",
+]
+dense = [
+    "sentence-transformers>=2.2.0",
+    "faiss-cpu>=1.7.4",
+    "torch>=2.0.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4.0",
+]
+
+[project.scripts]
+ascend-kb = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/ascend-c-kb"
+Repository = "https://github.com/your-org/ascend-c-kb"
+Issues = "https://github.com/your-org/ascend-c-kb/issues"
+Documentation = "https://github.com/your-org/ascend-c-kb#readme"
+
+[tool.setuptools.packages.find]
+include = ["knowledge_base*", "agent*"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
