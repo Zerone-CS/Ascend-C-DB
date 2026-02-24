@@ -1,4 +1,4 @@
-"""Ascend C Agent - RAG-enhanced operator development assistant."""
+"""AscendMind - RAG-enhanced operator development agent."""
 
 try:
     from agent.tools import search_ascend_docs, get_tool_definitions

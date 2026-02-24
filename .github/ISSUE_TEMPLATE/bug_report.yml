@@ -25,6 +25,6 @@ body:
       placeholder: |
         - OS: Ubuntu 22.04
         - Python: 3.10
-        - ascend-c-kb version: 0.1.0
+        - ascend-mind version: 0.1.0
     validations:
       required: true

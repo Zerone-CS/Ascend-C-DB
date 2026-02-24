@@ -1,4 +1,4 @@
-"""Tool definitions for the Ascend C Agent.
+"""Tool definitions for the AscendMind Agent.
 
 Provides:
 - search_ascend_docs: search the knowledge base
@@ -30,7 +30,7 @@ def search_ascend_docs(
     top_k: int = 5,
     mode: str = "sparse",
 ) -> list[dict]:
-    """Search the Ascend C knowledge base and return relevant document chunks.
+    """Search the AscendMind knowledge base and return relevant document chunks.
 
     Args:
         query: Search query in Chinese or English.

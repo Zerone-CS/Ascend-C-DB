@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Demo: search the Ascend C knowledge base."""
+"""Demo: search the AscendMind knowledge base."""
 
 import sys
 import os

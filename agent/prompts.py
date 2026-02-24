@@ -1,4 +1,4 @@
-"""System prompts and prompt templates for the Ascend C Agent."""
+"""System prompts and prompt templates for the AscendMind Agent."""
 
 SYSTEM_PROMPT = """\
 你是一个昇腾 Ascend C 算子开发专家助手。你的任务是帮助用户编写高质量的 Ascend C 算子代码。

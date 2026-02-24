@@ -1,6 +1,6 @@
 # Contributing / 贡献指南
 
-感谢你对 Ascend C Knowledge Base 的关注！欢迎任何形式的贡献。
+感谢你对 AscendMind 的关注！欢迎任何形式的贡献。
 
 ## 如何贡献
 
@@ -44,8 +44,8 @@
 ## 开发设置
 
 ```bash
-git clone https://github.com/your-org/ascend-c-kb.git
-cd ascend-c-kb
+git clone https://github.com/your-org/ascend-mind.git
+cd ascend-mind
 pip install -e ".[dev,agent]"
 python -m pytest tests/
 ```

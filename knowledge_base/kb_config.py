@@ -1,4 +1,4 @@
-"""Configuration for the Ascend C knowledge base."""
+"""Configuration for the AscendMind knowledge base."""
 
 import os
 

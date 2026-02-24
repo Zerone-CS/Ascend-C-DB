@@ -1,4 +1,4 @@
-"""Ascend C Knowledge Base package."""
+"""AscendMind - Knowledge Base package."""
 
 try:
     from knowledge_base.query_kb import KnowledgeBase

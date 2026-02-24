@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ascend C Knowledge Base & Agent - top-level entry point.
+"""AscendMind - top-level entry point.
 
 Usage:
     python main.py build [--dense] [--md PATH]   # 构建索引

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Ascend C knowledge base: parse Markdown -> chunk -> index.
+"""Build the AscendMind knowledge base: parse Markdown -> chunk -> index.
 
 Default mode: TF-IDF sparse retrieval (fast, no GPU needed).
 Optional: --dense to also build FAISS dense index with BGE embeddings.

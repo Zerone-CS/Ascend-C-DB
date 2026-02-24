@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Query the Ascend C knowledge base.
+"""Query the AscendMind knowledge base.
 
 Supports sparse (TF-IDF), dense (FAISS), and hybrid retrieval modes.
 
@@ -37,7 +37,7 @@ log = logging.getLogger(__name__)
 
 
 class KnowledgeBase:
-    """Ascend C knowledge base with sparse / dense / hybrid retrieval."""
+    """AscendMind knowledge base with sparse / dense / hybrid retrieval."""
 
     def __init__(self, mode: str = "sparse"):
         if mode not in ("sparse", "dense", "hybrid"):

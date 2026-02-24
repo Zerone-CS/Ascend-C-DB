@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ascend C RAG Agent - uses tool calling to search docs before writing operators.
+"""AscendMind RAG Agent - uses tool calling to search docs before writing operators.
 
 Supports any OpenAI-compatible API (OpenAI, vLLM, Ollama, etc.).
 
@@ -37,7 +37,7 @@ class AscendCAgent:
     """RAG-enhanced Agent for Ascend C operator development.
 
     Wraps any OpenAI-compatible chat API with automatic tool calling
-    to search the Ascend C knowledge base.
+    to search the AscendMind knowledge base.
 
     Args:
         api_key:  API key (or set OPENAI_API_KEY / ASCEND_AGENT_API_KEY env var).

@@ -3,14 +3,14 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ascend-c-kb"
+name = "ascend-mind"
 version = "0.1.0"
-description = "RAG-enhanced knowledge base & agent for Ascend C operator development"
+description = "AscendMind — RAG-enhanced knowledge base & intelligent agent for Ascend C operator development"
 readme = "README.md"
 license = {text = "Apache-2.0"}
 requires-python = ">=3.9"
 authors = [
-    {name = "AscendC-KB Contributors"},
+    {name = "AscendMind Contributors"},
 ]
 keywords = ["ascend", "npu", "operator", "rag", "knowledge-base", "huawei", "cann"]
 classifiers = [
@@ -47,13 +47,13 @@ dev = [
 ]
 
 [project.scripts]
-ascend-kb = "main:main"
+ascend-mind = "main:main"
 
 [project.urls]
-Homepage = "https://github.com/your-org/ascend-c-kb"
-Repository = "https://github.com/your-org/ascend-c-kb"
-Issues = "https://github.com/your-org/ascend-c-kb/issues"
-Documentation = "https://github.com/your-org/ascend-c-kb#readme"
+Homepage = "https://github.com/your-org/ascend-mind"
+Repository = "https://github.com/your-org/ascend-mind"
+Issues = "https://github.com/your-org/ascend-mind/issues"
+Documentation = "https://github.com/your-org/ascend-mind#readme"
 
 [tool.setuptools.packages.find]
 include = ["knowledge_base*", "agent*"]

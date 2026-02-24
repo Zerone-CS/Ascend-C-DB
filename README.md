@@ -1,10 +1,10 @@
 <div align="center">
 
-# Ascend C Knowledge Base & RAG Agent
+# AscendMind
 
-**RAG-enhanced knowledge base & AI agent for Huawei Ascend C operator development**
+**RAG-enhanced knowledge base & intelligent agent for Huawei Ascend C operator development**
 
-基于检索增强生成 (RAG) 的昇腾 Ascend C 算子开发知识库与智能助手
+AscendMind — 基于检索增强生成 (RAG) 的昇腾 Ascend C 算子开发知识库与智能助手
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
@@ -26,7 +26,7 @@
 
 ## 功能特性
 
-- 📚 **知识库** — 基于 CANN 8.2.RC1 官方文档榄7建，5900+ 文档块
+- 📚 **知识库** — 基于 CANN 8.2.RC1 官方文档构建，5900+ 文档块
 - 🔍 **三种检索模式** — 稀疏 (TF-IDF)、稠密 (FAISS + BGE)、混合
 - 🤖 **RAG Agent** — 写算子前自动检索文档，确保 API 用法准确
 - 🔧 **工具集成** — 兼容 OpenAI function-calling，可接入任意 Agent 框架
@@ -66,7 +66,7 @@
 ## Project Structure
 
 ```
-ascend-c-kb/
+ascend-mind/
 ├── main.py                    # CLI: python main.py build|query|agent
 ├── pyproject.toml             # Project metadata & dependencies
 ├── knowledge_base/            # 知识库模块
@@ -90,8 +90,8 @@ ascend-c-kb/
 ### Install
 
 ```bash
-git clone https://github.com/your-org/ascend-c-kb.git
-cd ascend-c-kb
+git clone https://github.com/your-org/ascend-mind.git
+cd ascend-mind
 
 # Core (sparse retrieval)
 pip install -e .
